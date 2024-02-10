@@ -6,8 +6,8 @@
       "@components/*": [
         "src/components/*"
       ],
-      "@sections/*": [
-        "src/components/*"
+      "@icons/*": [
+        "src/icons/*"
       ],
       "@layouts/*": [
         "src/layouts/*"
@@ -15,8 +15,14 @@
       "@pages/*": [
         "src/pages/*"
       ],
-      "@icons/*": [
-        "src/icons/*"
+      "@scripts/*": [
+        "src/scripts/*"
+      ],
+      "@sections/*": [
+        "src/components/*"
+      ],
+      "@styles/*": [
+        "src/styles/*"
       ],
     }
   }
