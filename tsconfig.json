@@ -19,7 +19,7 @@
         "src/scripts/*"
       ],
       "@sections/*": [
-        "src/components/*"
+        "src/sections/*"
       ],
       "@styles/*": [
         "src/styles/*"
