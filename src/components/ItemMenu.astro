@@ -3,7 +3,7 @@ const { link = "#", title } = Astro.props;
 ---
 
 <li
-  class=`${Astro.props.class} px-4 uppercase font-medium text-lg flex justify-center items-center hover:text-orange-500 hover:scale-105 hover:transition-all hover:duration-300`
+  class=`${Astro.props.class} px-4 uppercase font-medium text-lg flex justify-center items-center hover:text-orange-400 hover:scale-105 hover:transition-all hover:duration-300 cursor-pointer`
 >
   <a href={link}>{title}</a>
 </li>
