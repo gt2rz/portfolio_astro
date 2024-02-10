@@ -1,0 +1,33 @@
+---
+import Section from "./Section.astro";
+---
+
+<Section
+  class="animate-on-scroll-section bg-gradient-to-t from-orange-500/40 to-black"
+>
+  <article
+    class="h-full flex flex-col justify-center animate-on-scroll-section"
+  >
+    <h3 class="text-xl font-light mb-2">Software developer</h3>
+    <h1 class="flex align-right text-[10rem] font-bold mb-4">
+      <span class="text-orange-500">M</span>iguel<span class="text-orange-500"
+        >.</span
+      >
+    </h1>
+    <p class="flex-wrap text-lg opacity-60">
+      Creating technological solutions that satisfy the technological needs
+      <br /> of different types of clients, through the development of custom software.
+    </p>
+  </article>
+  <picture
+    class="w-full flex items-center justify-center drop-shadow-lg shadow-red-900 overflow-auto"
+  >
+    <!-- <source srcset="/assets/images/hero.webp" type="image/webp" />
+    <source srcset="/assets/images/hero.jpg" type="image/jpeg" /> -->
+    <img
+      class="w-1/2 h-1/2 object-fit object-center z-0"
+      src="assets/images/subscribe.svg"
+      alt="Miguel"
+    />
+  </picture>
+</Section>

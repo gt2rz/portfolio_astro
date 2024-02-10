@@ -1,0 +1,12 @@
+.animate-on-scroll {
+    opacity: 1 !important;
+    transform: translate(0) !important;    
+}
+
+.animate-on-scroll-section {
+    z-index: 1;
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: all 1s ease-out;
+    transition-delay: 0.3s;
+}

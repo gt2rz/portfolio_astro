@@ -1,0 +1,58 @@
+---
+const { colorBar = "bg-yellow-500", colorBackgroundBar = "bg-gray-500/50" } =
+  Astro.props;
+---
+
+<div class=`${Astro.props.class}`>
+  <div
+    id="progress-bar-inner"
+    class=`${colorBar} relative w-full h-[0%] p-[0] z-10`
+  >
+  </div>
+  <div
+    id="progress-bar-background"
+    class=`${colorBackgroundBar} absolute w-full h-[100%] p-[0]`
+  >
+  </div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const progressBarInner = document.getElementById("progress-bar-inner");
+    const progressBarBackground = document.getElementById(
+      "progress-bar-background"
+    );
+
+    window.addEventListener("scroll", function () {
+      try {
+        let scrollTop =
+          document.documentElement.scrollTop || document.body.scrollTop;
+        let scrollHeight =
+          document.documentElement.scrollHeight -
+          document.documentElement.clientHeight;
+
+        if (progressBarInner instanceof HTMLElement) {
+          progressBarInner.style.height = `${
+            (scrollTop / scrollHeight) * 100
+          }%`;
+        } else {
+          throw new Error("progressBarInner is not HTMLElement");
+        }
+
+        if (progressBarBackground instanceof HTMLElement) {
+          if (scrollTop > 0) {
+            progressBarBackground.style.height = `${
+              100 - (scrollTop / scrollHeight) * 100
+            }%`;
+          } else {
+            progressBarBackground.style.height = "100%";
+          }
+        } else {
+          throw new Error("progressBarBackground is not HTMLElement");
+        }
+      } catch (error) {
+        console.error(error);
+      }
+    });
+  });
+</script>
